@@ -118,12 +118,7 @@ trait EloquentAutoIndexTrait {
 		if (!isset(self::$auto_index_column_mutators[$column]) || !is_callable(self::$auto_index_column_mutators[$column]))
 			throw new \InvalidArgumentException('Missing index column mutator function for column '.$column);
 
-		$value = null;
-
-		if (isset($this->$column))
-			$value = $this->$column;
-
-		return self::$auto_index_column_mutators[$column]($value);
+		return self::$auto_index_column_mutators[$column]();
 	}
 	
 	
