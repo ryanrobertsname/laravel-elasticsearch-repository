@@ -34,7 +34,7 @@ php artisan config:publish ryanrobertsname/laravel-elasticsearch-repository
 
 ### Setup ###
 
-As an example for this section we will have a "products" index which contains two different types, "phones" and "phone_cases".
+As an example for this section we will have a "products" index which contains two different types, "product" and "product_owner".
 
 #### Migrations: ####
 
